@@ -1,0 +1,21 @@
+.body {
+  background-color: #f0f1ef;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+header {
+  background: #fff;
+  padding: 8px 0;
+  font-size: 16px;
+}
+
+header div #profile {
+  padding-top: 10px;
+  text-align: right;
+}
+
+.logo img {
+  height: 30px;
+  margin: 0 8px
+}

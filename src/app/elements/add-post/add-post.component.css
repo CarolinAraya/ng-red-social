@@ -1,0 +1,79 @@
+.publicar {
+    margin-bottom: 20px;
+}
+
+.publicar form textarea {
+    width: 100%;
+    max-width: 100%;
+    min-height: 100px;
+    max-height: 300px;
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    color: #3d3c3c;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 1);
+    border-radius: 6px;
+}
+
+.publicar form .contenedor-botones {
+    padding: 10px 0;
+    border-bottom: 1px solid #c7c8ca;
+}
+
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.inputfile+label {
+    color: white;
+    background-color: #82bd3f;
+    display: inline-block;
+    padding: 3px 7px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.publicar form button {
+    border: 1px solid #fff;
+    padding: 5px 30px;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    background: #82b43f;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.inputfile+label {
+    color: white;
+    background-color: #82bd3f;
+    display: inline-block;
+    padding: 3px 7px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.inputfile:focus+label,
+.inputfile+label:hover {
+    background-color: #3d3c3c;
+}
+
+.inputfile:focus+label {
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;
+}

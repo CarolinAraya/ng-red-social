@@ -1,0 +1,104 @@
+#container-post {
+    padding: 1em 0.5em;
+    border-bottom-right-radius: 0.4em;
+    border-bottom-left-radius: 0.4em;
+    background-color: #FFF;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    color: #4E4D53;
+    text-align: left;
+}
+
+#container-post textarea {
+    max-height: 180px;
+    min-height: 50px;
+    background: none;
+    border: none;
+}
+
+#container-post span {
+    margin-left: 1em;
+}
+
+.img-post {
+    width: 100%;
+}
+
+.publicacion {
+    margin-bottom: 20px;
+}
+
+.foto {
+    padding-right: 0px;
+}
+
+.publicacion .foto a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 7px 7px 7px 7px;
+}
+
+.publicacion .foto img {
+    width: 100%;
+}
+
+.publicacion .nombre {
+    line-height: 16px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.publicacion .texto {
+    background: #fff;
+    color: #3d3c3c;
+    margin-bottom: 3px;
+}
+
+.publicacion .texto p {
+    padding: 0;
+}
+
+.publicacion .post .caja-botones {
+    margin-bottom: 20px;
+}
+
+.publicacion .post .caja-botones p {
+    margin-bottom: 0px;
+    color: #005D2F;
+}
+
+.publicacion .btn-edit {
+    text-align: right;
+}
+
+.publicacion .post .caja-botones button {
+    cursor: pointer;
+    padding: 3px 6px;
+    display: inline-block;
+    color: #fff;
+    background: #005D2F;
+    border-radius: 4px;
+    border: none;
+    line-height: 18px;
+}
+
+.publicacion .post .caja-botones button:hover {
+    background: #fff;
+}
+
+.publicacion div #publicar {
+    padding: 10px;
+}
+
+.postTop {
+    background: #fff;
+    border-top-right-radius: 0.4em;
+    border-top-left-radius: 0.4em;
+    padding-top: 20px;
+}
+
+.iconPost {
+    color: #82b43f;
+}
