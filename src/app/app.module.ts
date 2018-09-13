@@ -1,11 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-
 import { routes } from './app-routing.module'
-
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
+import {AngularFireDatabaseModule} from '@angular/fire/database';
+import {AngularFireAuthModule} from '@angular/fire/auth';
+import {AngularFireModule} from '@angular/fire';
+import {environment} from '../environments/environment';
+
+
+
 
 //Material componentes necesarios
 import {CdkTableModule} from '@angular/cdk/table';
@@ -44,11 +50,16 @@ import { PerfilComponent } from './pages/perfil/perfil.component';
     AddPostComponent,
     HomeComponent,
     PerfilComponent,
-    AddPostComponent
+    AddPostComponent,
+
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    AngularFireAuthModule,
+    AngularFireDatabaseModule,
+    AngularFireModule,
+    AngularFireModule.initializeApp(environment.firebase),
 
     CdkTableModule, CdkTreeModule,
     MatChipsModule, MatDialogModule, MatDividerModule, MatTooltipModule,
