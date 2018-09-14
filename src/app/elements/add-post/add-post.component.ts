@@ -18,9 +18,12 @@ export class AddPostComponent{
     });
   }
   addPost() {
+    let time = new Date().toLocaleString()
     const newPost = { 
       contenido: this.postForm.value.content,
-      nombre: 'nombre',
+      user: 'nombre',
+      likes: 0,
+      time
     };
     this.database.addData(newPost);//esto agrega un nuevo meme   
   }
