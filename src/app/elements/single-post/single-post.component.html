@@ -9,13 +9,13 @@
 </div>
 <div class="row">
     <div class="col" id="container-post">
-        <div class="row postImageDiv">
+        <div *ngIf="post.imageUrl" class="row postImageDiv">
             <div class="col">
-                <img class="img-post" src="../../assets/img/image-4.jpg">
+                <img class="img-post" src="{{post.imageUrl}}">
             </div>
         </div>
         <form [formGroup]="editContent" (ngSubmit)="editPost(postId)">
-            <textarea #content formControlName="content" class="col-12 col-md-12" [attr.disabled]="enableEditPost ? '' : null"></textarea>
+            <textarea #content formControlName="content" class="col-12 col-md-12" [attr.disabled]="enableEditPost ? '' : null" [style.height.px]="post.contenido.length"></textarea>
             <div class="d-flex justify-content-between align-items-center box-icons">
                 <span>{{post.time}}</span>
                 <span><i class="fas fa-thumbs-up iconPost " (click)="addLike(postId, post.likes) "></i>{{post.likes}}</span>
