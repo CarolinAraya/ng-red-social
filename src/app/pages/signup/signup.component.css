@@ -1,40 +1,40 @@
-.login-form {
+.signup-form {
   margin-top: 40px;
 }
 
-.login-form-body {
+.signup-form-body {
   padding: 10px;
   background: white;
 }
 
-.login-form-content-control {
+.signup-form-content-control {
   margin: 10px;
 }
 
-.login-form-control {
+.signup-form-control {
   width: 100%;
 }
 
-.login-form-submit-button {
-  background: green;
-  color: white;
+.signup-form-submit-button {
+  background: greens ;
+  color: green;
   height: 50px;
 }
 
-.login-prefix-icon {
+.signup-prefix-icon {
   margin-right: 10px;
 }
 
-.login-form-footer {
+.signup-form-footer {
   margin: 0;
 }
 
-.login-forgot-password-container {
+.signup-forgot-password-container {
   margin: 0;
 }
 
-.login-forgot-password-button {
-  color: white;
+.signup-forgot-password-button {
+  color: green;
 }
 
 .signup-container {
@@ -48,5 +48,5 @@
 }
 
 .signup-button {
-color: green;
+color: green ;
 }

@@ -1,21 +1,27 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { routes } from './app-routing.module'
+import { routes } from './app-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppComponent } from './app.component';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import {AngularFireDatabaseModule} from '@angular/fire/database';
-import {AngularFireAuthModule} from '@angular/fire/auth';
-import {AngularFireModule} from '@angular/fire';
-import {environment} from '../environments/environment';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
+import { AuthService } from './auth.service';
 
+//Services
+//import { AuthGuard } from './services/auth/auth.guard';
 
 
 
 //Material componentes necesarios
-import {CdkTableModule} from '@angular/cdk/table';
-import {CdkTreeModule} from '@angular/cdk/tree';
+import { CdkTableModule } from '@angular/cdk/table';
+import { CdkTreeModule } from '@angular/cdk/tree';
 import {
   MAT_DIALOG_DEFAULT_OPTIONS,
   MatSlideToggleModule, MatButtonToggleModule, MatCardModule, MatButtonModule, MatToolbarModule,
@@ -30,13 +36,13 @@ import {
 
 //our components
 import { LoginComponent } from './pages/login/login.component';
-
 import { SidebarComponent } from './elements/sidebar/sidebar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PostContainerComponent } from './pages/post-container/post-container.component';
 import { AddPostComponent } from './elements/add-post/add-post.component';
 import { SinglePostComponent } from './elements/single-post/single-post.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
+import { SignupComponent } from './pages/signup/signup.component';
 
 
 
@@ -51,10 +57,16 @@ import { PerfilComponent } from './pages/perfil/perfil.component';
     HomeComponent,
     PerfilComponent,
     AddPostComponent,
+    SignupComponent,
+
 
   ],
   imports: [
     BrowserModule,
+    CommonModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     AngularFireAuthModule,
     AngularFireDatabaseModule,
@@ -76,7 +88,9 @@ import { PerfilComponent } from './pages/perfil/perfil.component';
     RouterModule.forRoot(routes),
   ],
   providers: [
-    {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}
+    { provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher },
+    AuthService,
+    //AuthGuard,
   ],
   bootstrap: [AppComponent]
 })

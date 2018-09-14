@@ -1,31 +1,39 @@
 <div class="container">
   <div class="row">
     <div class="col-12 col-md-5 mx-auto">
-      <div class="form-group login-form">
-        <input id="txtEmail" type="email" class="form-control pd" placeholder="Email" required="required">
-        <input id="txtPassword" type="password" class="form-control pd" placeholder="Password" required="required">
-        <div class="row">
-          <div class="col-6">
-            <button type="submit" id="btnLogin" class="btn btn-primary inline  full  green-one" onclick="loginWithFirebase()">Log in</button>
+      <div class="start-up-main-container">
+        <div class="start-up-main-panel">
+          <div class="start-up-main-image">
+            <img src="../../../assets/img/logo.png" class="start-up-image">
           </div>
-          <div class="col-6">
-            <button class="btn btn-primary inline full green-one" onclick="registerWithFirebase()">Registrarse</button>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <button class="btn btn-primary inline pd full green-two" onclick="facebookLoginwithFireBase()">
-              <i class="fab fa-facebook-f"></i> Sign in facebook</button>
-          </div>
-          <div class="col-12">
-            <button class="btn btn-primary inline pd full green-two" onclick="googleLoginwithFireBase()">
-              <i class="fab fa-google"></i> Sign in google</button>
-          </div>
-        </div>
+          <div class="login-form">
+            <form [formGroup]="loginForm">
+              <div class="login-form-body">
+                <div class="login-form-content-control">
+                  <mat-form-field class="login-form-control">
+                    <mat-icon matPrefix class="login-prefix-icon">account_circle</mat-icon>
+                    <input matInput placeholder="Correo Electrónico" formControlName="email">
+                  </mat-form-field>
 
-        <div id="message"></div>
-      </div>
-      <div>
+                  <mat-form-field class="login-form-control">
+                    <mat-icon matPrefix class="login-prefix-icon">lock</mat-icon>
+                    <input matInput="password" type="password" placeholder="Contraseña" formControlName="password">
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="login-form-footer">
+                <button mat-button (click)="login()" [disabled]="!loginForm.valid" class="login-form-control login-form-submit-button">ENTRAR</button>
+              </div>
+            </form>
+          </div>
+          <div class="login-forgot-password-container">
+            <button mat-button class="login-forgot-password-button" (click)="gotoForgotPassword()">¿Olvidaste tu contraseña?</button>
+          </div>
+          <div class="signup-container">
+            <span class="signup-text">¿NO TIENES CUENTA?</span>
+            <button mat-button class="signup-button" (click)="gotoSingup()">REGISTRATE</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
