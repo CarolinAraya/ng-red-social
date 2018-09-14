@@ -3,8 +3,8 @@
         <a href="" class="commentName mr-0"><img class="profile-comment" width="30" src="../../assets/img/user-default.png"></a>
     </div>
     <div class="col-9">
-        <h4>Nombre</h4>
-        <h6>rol</h6>
+        <h4>{{post.user}}</h4>
+        <h6></h6>
     </div>
 </div>
 <div class="row">
@@ -14,17 +14,15 @@
                 <img class="img-post" src="../../assets/img/image-4.jpg">
             </div>
         </div>
-        <textarea id="" class="col-12 col-md-12" style="" disabled>Hola, este es el contenido del post.</textarea>
-        <div class="caja-botones d-flex justify-content-between align-items-center">
-            <span>12 agosto</span>
-            <span><i class="fas fa-thumbs-up iconPost" onclick=""></i>9</span>
-            <i class="far fa-edit iconPost" id="" onclick=""></i>
-            <i class="far fa-trash-alt iconPost" id="" onclick=""></i>
-        </div>
-    </div>
-</div>
-<div class="row">
-    <div class="col">
-
+        <form [formGroup]="editContent" (ngSubmit)="editPost(postId)">
+            <textarea #content formControlName="content" class="col-12 col-md-12" [attr.disabled]="enableEditPost ? '' : null"></textarea>
+            <div class="d-flex justify-content-between align-items-center box-icons">
+                <span>{{post.time}}</span>
+                <span><i class="fas fa-thumbs-up iconPost " (click)="addLike(postId, post.likes) "></i>{{post.likes}}</span>
+                <i class="far fa-edit iconPost " (click)="enableEdit(postId) "></i>
+                <i class="far fa-trash-alt iconPost " (click)="deletePost(postId) "></i>
+            </div>
+            <button *ngIf="!enableEditPost" type="submit">editar</button>
+        </form>
     </div>
 </div>

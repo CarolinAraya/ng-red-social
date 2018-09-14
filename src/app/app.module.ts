@@ -14,10 +14,9 @@ import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AuthService } from './auth.service';
 
+
 //Services
 //import { AuthGuard } from './services/auth/auth.guard';
-
-
 
 //Material componentes necesarios
 import { CdkTableModule } from '@angular/cdk/table';
@@ -72,7 +71,6 @@ import { SignupComponent } from './pages/signup/signup.component';
     AngularFireDatabaseModule,
     AngularFireModule,
     AngularFireModule.initializeApp(environment.firebase),
-
     CdkTableModule, CdkTreeModule,
     MatChipsModule, MatDialogModule, MatDividerModule, MatTooltipModule,
     MatExpansionModule, MatListModule, MatNativeDateModule,
@@ -84,7 +82,7 @@ import { SignupComponent } from './pages/signup/signup.component';
     MatCheckboxModule, MatIconModule, MatMenuModule, MatSelectModule, MatDatepickerModule,
     MatRadioModule, MatSliderModule, MatTabsModule, MatBadgeModule, MatBottomSheetModule,
     MatTreeModule,
-
+    ReactiveFormsModule,
     RouterModule.forRoot(routes),
   ],
   providers: [

@@ -1,16 +1,27 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { DatabaseService } from '../../database.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-add-post',
   templateUrl: './add-post.component.html',
   styleUrls: ['./add-post.component.css']
 })
-export class AddPostComponent implements OnInit {
-
-  constructor(private router: Router) { }
-
-  ngOnInit() {
+export class AddPostComponent{
+  postForm: FormGroup;
+  constructor(private database: DatabaseService, private formBuilder: FormBuilder) { 
+    this.createPostForm(); 
   }
-
+  createPostForm() {
+    this.postForm = this.formBuilder.group({
+      content: ['', Validators.required],
+    });
+  }
+  addPost() {
+    const newPost = { 
+      contenido: this.postForm.value.content,
+      nombre: 'nombre',
+    };
+    this.database.addData(newPost);//esto agrega un nuevo meme   
+  }
 }
