@@ -1,10 +1,35 @@
+.start-up-main-container {
+  background: #fff;
+  height: 100%;
+  overflow: auto;
+}
+
+.start-up-main-panel {
+  margin: auto;
+  width: 80%;
+  max-width: 300px;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.start-up-main-image {
+  display: flex;
+  justify-content: center;
+}
+
+.start-up-image {
+  height: 60px;
+}
+
 .login-form {
   margin-top: 40px;
 }
 
 .login-form-body {
   padding: 10px;
-  background: white;
+  background: fff;
 }
 
 .login-form-content-control {
@@ -16,8 +41,8 @@
 }
 
 .login-form-submit-button {
-  background: green;
-  color: white;
+  background: #a6c480;
+  color: #fff;
   height: 50px;
 }
 
@@ -44,9 +69,10 @@
 }
 
 .signup-text {
-  color: green;
+  color:#a6c480;
 }
 
 .signup-button {
-color: green;
+color: #a6c480;
 }
+
