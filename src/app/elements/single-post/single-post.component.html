@@ -1,19 +1,13 @@
 <div class="row postTop">
     <div class="col-auto foto">
-        <a href="" class="commentName mr-0"><img class="profile-comment" width="30" src="../../assets/img/user-default.png"></a>
+        <img class="profile-comment" width="30" src="../../assets/img/user-default.png">
     </div>
     <div class="col-9">
         <h4>{{post.user}}</h4>
-        <h6></h6>
     </div>
 </div>
 <div class="row">
     <div class="col" id="container-post">
-        <div *ngIf="post.imageUrl" class="row postImageDiv">
-            <div class="col">
-                <img class="img-post" src="{{post.imageUrl}}">
-            </div>
-        </div>
         <form [formGroup]="editContent" (ngSubmit)="editPost(postId)">
             <textarea #content formControlName="content" class="col-12 col-md-12" [attr.disabled]="enableEditPost ? '' : null" [style.height.px]="post.contenido.length"></textarea>
             <div class="d-flex justify-content-between align-items-center box-icons">

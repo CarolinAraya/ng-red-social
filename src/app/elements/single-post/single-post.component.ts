@@ -31,7 +31,9 @@ export class SinglePostComponent implements OnInit{
   }
 
   deletePost(key){
-    this.DatabaseService.deleteData(key)
+    if(confirm('Estas seguro?')){
+      this.DatabaseService.deleteData(key)
+    } 
   }
   addLike(key, likes){
     likes++

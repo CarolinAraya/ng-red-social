@@ -11,8 +11,8 @@ export class DatabaseService {
     constructor(private database: AngularFireDatabase) { // aquí se engancha la base de datos
       this.postList$ = this.database.list('/posts');
     }
-    addData(object) {
-      this.postList$.push(object);
+    addData(path, object) {
+      this.database.list(path).push(object);
     }
     getData(){
        return this.postList$.snapshotChanges()

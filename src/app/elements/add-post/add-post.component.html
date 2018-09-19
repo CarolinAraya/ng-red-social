@@ -2,17 +2,7 @@
     <div class="col">
         <form [formGroup]="postForm" (ngSubmit)="addPost()">
             <textarea #description formControlName="content" placeholder="¿Qué te gustaría publicar?"></textarea>
-            <div class="contenedor-botones d-flex justify-content-between">
-                <div class="media">
-                    <input type="file" type="submit" name="file" id="file" class="inputfile" onchange="" value="subir" />
-                    <label for="file">
-              <i class="fas fa-image"></i>
-            </label>
-                </div>
-                <div>
-                    <button type="submit" id="btn-publicar" [disabled]="!postForm.valid">Publicar</button>
-                </div>
-            </div>
+            <button type="submit" id="btn-publicar" [disabled]="!postForm.valid">Publicar</button>
         </form>
     </div>
 </div>

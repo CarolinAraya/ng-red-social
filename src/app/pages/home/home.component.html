@@ -1,41 +1,26 @@
 <div class="body">
-  <header>
-    <div class="container">
-      <div class="row" id="profile">
-        <div class="col-4 col-md-3 logo">
-          <a class="float-left" href="#">
-            <img src="../assets/img/logo.png" alt="">
-          </a>
+    <header>
+        <div class="container">
+            <div class="row" id="profile">
+                <div class="col-4 col-md-3 logo">
+                    <img src="../assets/img/logo.png" alt="">
+                </div>
+                <div class="col col-md-8 logo" *ngIf="authService.user">
+                    <span>Bienvenido : {{authService.user.email}}</span>
+                </div>
+            </div>
         </div>
-        <div class="col col-md-8 logo">
-          <a href="profile.html">
-            <span class="displayName">Estephany</span>
-          </a>
-          <a href="profile.html" class="imagen">
-            <img src="../assets//img//user-default.png" alt="">
-          </a>
-        </div>
-      </div>
-    </div>
-  </header>
-  <main class="container">
-    <div class="row">
-      <div class="col-md-3 barra-lateral-izquierda">
-        <div class="mat-app-background basic-container">
-          <app-sidebar></app-sidebar>
-        </div>
-      </div>
-      <div class="col col-md-6 mx-auto mt-4">
+    </header>
+    <main class="container">
         <div class="row">
-          <div class="col">
-            <a href="#" class="btn-menu d-md-none d-flex justify-content-between" id="btn-menu">
-              <span>Menu</span>
-              <i class="fas fa-bars"></i>
-            </a>
-          </div>
+            <div class="col-md-3 barra-lateral-izquierda">
+                <div class="mat-app-background basic-container">
+                    <app-sidebar></app-sidebar>
+                </div>
+            </div>
+            <div class="col-md-6 mx-auto mt-4">
+                <router-outlet></router-outlet>
+            </div>
         </div>
-        <router-outlet></router-outlet>
-      </div>
-    </div>
-  </main>
+    </main>
 </div>
