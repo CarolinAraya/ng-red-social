@@ -15,7 +15,7 @@ import { environment } from '../environments/environment';
 import { AuthService } from './auth.service';
 
 //Services
-//import { AuthGuard } from './services/auth/auth.guard';
+import { AuthGuard } from './auth.guard';
 
 
 
@@ -90,7 +90,7 @@ import { SignupComponent } from './pages/signup/signup.component';
   providers: [
     { provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher },
     AuthService,
-    //AuthGuard,
+    AuthGuard,
   ],
   bootstrap: [AppComponent]
 })

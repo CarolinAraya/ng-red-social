@@ -5,6 +5,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { PostContainerComponent } from './pages/post-container/post-container.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { SignupComponent } from './pages/signup/signup.component';
+import { AuthGuard } from './auth.guard';
 
 export const routes: Routes = [
   {
@@ -25,6 +26,7 @@ export const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
+    canActivate: [AuthGuard],
     children: [
       { path: 'posts', component: PostContainerComponent },
       { path: 'perfil', component: PerfilComponent },
