@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { AuthService } from '../../auth.service';
+import { DatabaseService } from '../../database.service';
 @Component({
   selector: 'app-perfil',
   templateUrl: './perfil.component.html',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PerfilComponent implements OnInit {
 
-  constructor() { }
+  constructor(private authService: AuthService, private database: DatabaseService) { }
 
   ngOnInit() {
   }

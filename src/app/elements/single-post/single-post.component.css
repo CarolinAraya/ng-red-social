@@ -60,11 +60,11 @@
     padding: 0;
 }
 
-.publicacion .post .caja-botones {
+.publicacion .post .box-icons {
     margin-bottom: 20px;
 }
 
-.publicacion .post .caja-botones p {
+.publicacion .post .box-iconss p {
     margin-bottom: 0px;
     color: #005D2F;
 }
@@ -73,18 +73,18 @@
     text-align: right;
 }
 
-.publicacion .post .caja-botones button {
-    cursor: pointer;
-    padding: 3px 6px;
-    display: inline-block;
+#container-post button {
+    border: 1px solid #fff;
+    padding: 5px 30px;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    background: #82b43f;
     color: #fff;
-    background: #005D2F;
-    border-radius: 4px;
-    border: none;
-    line-height: 18px;
+    border-radius: 3px;
+    cursor: pointer;
 }
 
-.publicacion .post .caja-botones button:hover {
+.publicacion button:hover {
     background: #fff;
 }
 
