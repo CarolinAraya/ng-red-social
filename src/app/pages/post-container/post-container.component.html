@@ -1,8 +1,6 @@
 <app-add-post></app-add-post>
 <div class="publicacion">
-    <div id="contentPublicaciones">
-        <app-single-post></app-single-post>
-        <app-single-post></app-single-post>
-        <app-single-post></app-single-post>
+    <div id="contentPublicaciones" *ngFor="let post of posts$ | async">
+        <app-single-post [post]="post.payload.val()" [postId]="post.payload.key"></app-single-post>
     </div>
 </div>

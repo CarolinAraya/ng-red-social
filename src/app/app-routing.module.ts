@@ -29,7 +29,7 @@ export const routes: Routes = [
     canActivate: [AuthGuard],
     children: [
       { path: 'posts', component: PostContainerComponent },
-      { path: 'perfil', component: PerfilComponent },
+      { path: 'profile', component: PerfilComponent },
       { path: '', redirectTo: '/home/posts', pathMatch: 'prefix' },
       { path: '**', redirectTo: '/home/posts', pathMatch: 'prefix' },
     ]
