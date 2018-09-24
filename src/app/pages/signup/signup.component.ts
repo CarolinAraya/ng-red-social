@@ -36,7 +36,7 @@ export class SignupComponent implements OnInit {
       })
       .catch(error => {
 
-        alert("Error, intenta otra vez");
+        alert(error.message);
       });
   }
 
