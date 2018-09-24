@@ -5,7 +5,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { PostContainerComponent } from './pages/post-container/post-container.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { SignupComponent } from './pages/signup/signup.component';
-import { AuthGuard } from './auth.guard';
+import { AuthGuard } from './services/auth.guard';
 
 export const routes: Routes = [
   {

@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, SimpleChanges, OnChanges } from '@angular/core';
 import { Router } from '@angular/router';
-import { DatabaseService } from '../../database.service';
+import { DatabaseService } from '../../services/database.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 
@@ -16,7 +16,7 @@ export class SinglePostComponent implements OnInit{
   editContent: FormGroup;
 
   constructor(private formBuilder: FormBuilder, private DatabaseService: DatabaseService) {
-    this.createEditContentForm(); 
+    this.createEditContentForm();
    }
   createEditContentForm() {
     this.editContent = this.formBuilder.group({
@@ -33,7 +33,7 @@ export class SinglePostComponent implements OnInit{
   deletePost(key){
     if(confirm('Estas seguro?')){
       this.DatabaseService.deleteData(key)
-    } 
+    }
   }
   addLike(key, likes){
     likes++

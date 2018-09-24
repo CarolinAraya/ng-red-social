@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { DatabaseService } from '../../database.service';
+import { DatabaseService } from '../../services/database.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AuthService } from '../../auth.service';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-add-post',
@@ -10,8 +10,8 @@ import { AuthService } from '../../auth.service';
 })
 export class AddPostComponent{
   postForm: FormGroup;
-  constructor(private authService: AuthService, private database: DatabaseService, private formBuilder: FormBuilder) { 
-    this.createPostForm(); 
+  constructor(private authService: AuthService, private database: DatabaseService, private formBuilder: FormBuilder) {
+    this.createPostForm();
   }
   createPostForm() {
     this.postForm = this.formBuilder.group({
@@ -20,13 +20,13 @@ export class AddPostComponent{
   }
   addPost() {
     let time = new Date().toLocaleString()
-    const newPost = { 
+    const newPost = {
       contenido: this.postForm.value.content,
       user: this.authService.user.email,
       likes: 0,
       time
     };
-    this.database.addData('posts', newPost);  
+    this.database.addData('posts', newPost);
     this.postForm.reset();
   }
 }

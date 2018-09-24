@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { routes } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -12,11 +12,11 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
-import { AuthService } from './auth.service';
+import { AuthService } from './services/auth.service';
 
 
 //Services
-import { AuthGuard } from './auth.guard';
+import { AuthGuard } from './services/auth.guard';
 
 //Material componentes necesarios
 import { CdkTableModule } from '@angular/cdk/table';
@@ -35,7 +35,6 @@ import {
 
 //our components
 import { LoginComponent } from './pages/login/login.component';
-import { SidebarComponent } from './elements/sidebar/sidebar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PostContainerComponent } from './pages/post-container/post-container.component';
 import { AddPostComponent } from './elements/add-post/add-post.component';
@@ -50,7 +49,6 @@ import { SignupComponent } from './pages/signup/signup.component';
     AppComponent,
     PostContainerComponent,
     LoginComponent,
-    SidebarComponent,
     SinglePostComponent,
     AddPostComponent,
     HomeComponent,

@@ -41,7 +41,7 @@
 }
 
 .login-form-submit-button {
-  background: #a6c480;
+  background: green;
   color: #fff;
   height: 50px;
 }
@@ -54,14 +54,6 @@
   margin: 0;
 }
 
-.login-forgot-password-container {
-  margin: 0;
-}
-
-.login-forgot-password-button {
-  color: white;
-}
-
 .signup-container {
   margin-top: 20px;
   margin-bottom: 30px;
@@ -69,10 +61,11 @@
 }
 
 .signup-text {
-  color:#a6c480;
+  color:green;
 }
 
 .signup-button {
-color: #a6c480;
+color: green;
+margin-left: 7px;
 }
 

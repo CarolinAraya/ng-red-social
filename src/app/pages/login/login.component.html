@@ -22,16 +22,15 @@
                 </div>
               </div>
               <div class="login-form-footer">
-                <button mat-button (click)="login()" [disabled]="!loginForm.valid" class="login-form-control login-form-submit-button">ENTRAR</button>
+
+
+                <button mat-raised-button  (click)="login()" [disabled]="!loginForm.valid" class="login-form-control login-form-submit-button">ENTRAR</button>
               </div>
             </form>
           </div>
-          <div class="login-forgot-password-container">
-            <button mat-button class="login-forgot-password-button" (click)="gotoForgotPassword()">¿Olvidaste tu contraseña?</button>
-          </div>
           <div class="signup-container">
             <span class="signup-text">¿NO TIENES CUENTA?</span>
-            <button mat-button class="signup-button" (click)="gotoSingup()">REGISTRATE</button>
+            <button mat-raised-button color class="signup-button" (click)="gotoSingup()">REGISTRATE</button>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { DatabaseService } from '../../database.service';
+import { DatabaseService } from '../../services/database.service';
 
 @Component({
   selector: 'app-post-container',
@@ -9,6 +9,6 @@ import { DatabaseService } from '../../database.service';
 })
 export class PostContainerComponent {
   posts$;
-  constructor(private router: Router, private database: DatabaseService) { 
+  constructor(private router: Router, private database: DatabaseService) {
     this.posts$ = database.getData()  }
 }

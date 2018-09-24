@@ -1,26 +1,39 @@
-<div class="body">
-    <header>
-        <div class="container">
-            <div class="row" id="profile">
-                <div class="col-4 col-md-3 logo">
-                    <img src="../assets/img/logo.png" alt="">
-                </div>
-                <div class="col col-md-8 logo" *ngIf="authService.user">
-                    <span>Bienvenido : {{authService.user.email}}</span>
-                </div>
-            </div>
+<div class="home-container" [class.example-is-mobile]="mobileQuery.matches">
+  <mat-toolbar class="home-toolbar">
+      <div class="col-4 col-md-3 logo">
+        <a class="float-left">
+          <button mat-icon-button (click)="snav.toggle()">
+            <img src="../assets/img/logo.png" alt="">
+          </button>
+        </a>
+      </div>
+      <div class="col col-md-8 p-3 text-right" *ngIf="authService.user">
+        <span>Bienvenido : {{authService.user.email}}</span>
+      </div>
+  </mat-toolbar>
+  <mat-sidenav-container class="home-sidenav-container pl-7 pr-7" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+    <mat-sidenav color="primary" #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
+      fixedTopGap="56" [opened]="!mobileQuery.matches">
+      <mat-nav-list>
+        <a mat-list-item routerLink="/home/post">
+          <i class="fas fa-edit"></i>Post</a>
+        <a mat-list-item routerLink="/home/perfil">
+          <i class="fas fa-user"></i>Perfil</a>
+        <a mat-list-item>
+          <i class="fas fa-users"></i>Lista de Usuarios</a>
+        <a mat-list-item>
+          <i class="fas fa-envelope"></i>Mensajes</a>
+        <a mat-list-item (click)="logout()">
+          <i class="fas fa-sign-out-alt"></i>Logout</a>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <div class="container">
+        <div class="col col-md-7 mx-auto mt-4">
+          <router-outlet></router-outlet>
         </div>
-    </header>
-    <main class="container">
-        <div class="row">
-            <div class="col-md-3 barra-lateral-izquierda">
-                <div class="mat-app-background basic-container">
-                    <app-sidebar></app-sidebar>
-                </div>
-            </div>
-            <div class="col-md-6 mx-auto mt-4">
-                <router-outlet></router-outlet>
-            </div>
-        </div>
-    </main>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
 </div>

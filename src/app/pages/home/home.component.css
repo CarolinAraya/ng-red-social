@@ -19,3 +19,33 @@ header div #profile {
   height: 30px;
   margin: 0 8px
 }
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.sidenav-container{
+  left: 0;
+}
+
+.home-toolbar {
+  z-index: 2;
+}
+
+.home-sidenav-container {
+  flex: 1;
+}
+
+.mat-drawer {
+  background-color: green;
+  color: #e3f2d3;
+  padding: 3rem;
+}
+
+

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../../auth.service';
-import { DatabaseService } from '../../database.service';
+import { AuthService } from '../../services/auth.service';
+import { DatabaseService } from '../../services/database.service';
 @Component({
   selector: 'app-perfil',
   templateUrl: './perfil.component.html',

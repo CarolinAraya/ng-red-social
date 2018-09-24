@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
-import { AuthService } from '../../auth.service';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'signup',
@@ -32,10 +32,11 @@ export class SignupComponent implements OnInit {
 
     this.authService.signup(data.email, data.password)
       .then(userCredential => {
-
+        this.router.navigate(['home/posts'], { relativeTo: this.route.parent });//poner ruta?
       })
       .catch(error => {
 
+        alert("Error, intenta otra vez");
       });
   }
 

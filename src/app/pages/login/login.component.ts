@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
-import { AuthService } from '../../auth.service';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'login',
@@ -23,22 +23,27 @@ export class LoginComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private router: Router, private authService: AuthService) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    if(!null){
+      this.router.navigate(['home/posts'], { relativeTo: this.route.parent });//poner ruta?
+
+       }
+   }
 
   login() {
     var data = this.loginForm.value;
 
     this.authService.login(data.email, data.password)
       .then(() => {
-        this.router.navigate(['home/post'], { relativeTo: this.route.parent });//poner ruta?
+        this.router.navigate(['home/posts'], { relativeTo: this.route.parent });//poner ruta?
       })
       .catch(error => {
         //Algo salió mal, avisemos mejor para que reintente
-        this.snackBar.open('Error al tratar de iniciar sesión, trata otra vez'
-          , null/*No necesitamos botón en el aviso*/
-          , {
+        /* this.snackBar.open('Error al tratar de iniciar sesión, trata otra vez'
+          , null          , {
             duration: 3000
-          });
+          }); */
+
       });
   }
 
