@@ -1,3 +1,4 @@
+<<<<<<< 4342614c6da3055bc2f236b027267dd40f0819df
 <div class="container">
   <div class="row">
     <div class="col-12 col-md-7 mx-auto">
@@ -44,3 +45,44 @@
     </div>
   </div>
 </div>
+=======
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-5 mx-auto">
+      <div class="start-up-main-container">
+        <div class="start-up-main-panel">
+          <div class="start-up-main-image">
+            <img src="../../../assets/img/logo.png" class="start-up-image">
+          </div>
+          <div class="login-form">
+            <form [formGroup]="loginForm">
+              <div class="login-form-body">
+                <div class="login-form-content-control">
+                  <mat-form-field class="login-form-control">
+                    <mat-icon matPrefix class="login-prefix-icon">account_circle</mat-icon>
+                    <input matInput placeholder="Correo Electrónico" formControlName="email">
+                  </mat-form-field>
+
+                  <mat-form-field class="login-form-control">
+                    <mat-icon matPrefix class="login-prefix-icon">lock</mat-icon>
+                    <input matInput="password" type="password" placeholder="Contraseña" formControlName="password">
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="login-form-footer">
+
+
+                <button mat-raised-button  (click)="login()" [disabled]="!loginForm.valid" class="login-form-control login-form-submit-button">ENTRAR</button>
+              </div>
+            </form>
+          </div>
+          <div class="signup-container">
+            <span class="signup-text">¿NO TIENES CUENTA?</span>
+            <button mat-raised-button color class="signup-button" (click)="gotoSingup()">REGISTRATE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+>>>>>>> cambios de caro -sidenav
