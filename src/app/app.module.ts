@@ -41,6 +41,7 @@ import { AddPostComponent } from './elements/add-post/add-post.component';
 import { SinglePostComponent } from './elements/single-post/single-post.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { SignupComponent } from './pages/signup/signup.component';
+import { UsersComponent } from './pages/users/users.component';
 
 
 
@@ -55,6 +56,7 @@ import { SignupComponent } from './pages/signup/signup.component';
     PerfilComponent,
     AddPostComponent,
     SignupComponent,
+    UsersComponent,
 
 
   ],

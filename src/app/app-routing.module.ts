@@ -6,6 +6,7 @@ import { PostContainerComponent } from './pages/post-container/post-container.co
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { AuthGuard } from './services/auth.guard';
+import { UsersComponent } from './pages/users/users.component';
 
 export const routes: Routes = [
   {
@@ -30,6 +31,7 @@ export const routes: Routes = [
     children: [
       { path: 'posts', component: PostContainerComponent },
       { path: 'profile', component: PerfilComponent },
+      { path: 'users', component: UsersComponent },
       { path: '', redirectTo: '/home/posts', pathMatch: 'prefix' },
       { path: '**', redirectTo: '/home/posts', pathMatch: 'prefix' },
     ]

@@ -4,6 +4,11 @@
   font-size: 16px;
 }
 
+.menu-icon {
+  color: green;
+    padding: 10px;
+}
+
 header {
   background: #fff;
   padding: 8px 0;
@@ -45,7 +50,7 @@ header div #profile {
 .mat-drawer {
   background-color: green;
   color: #e3f2d3;
-  padding: 3rem;
+  padding: 1rem;
 }
 
 .text-right {
@@ -60,27 +65,30 @@ header div #profile {
 
 .fa-edit:before {
   content: "\f044";
-  padding: 10px;
+  padding: 30px;
 }
 
 .fa-user:before {
   content: "\f007";
-  padding: 10px;
+  padding: 30px;
 }
 
 .fa-users:before {
   content: "\f0c0";
-  padding: 10px;
+  padding: 30px;
+
 }
 
 .fa-envelope:before {
   content: "\f0e0";
-  padding: 10px;
+  padding: 30px;
+
 }
 
 .fa-sign-out-alt:before {
   content: "\f2f5";
-  padding: 10px;
+  padding: 30px;
+
 }
 
 

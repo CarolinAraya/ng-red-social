@@ -8,9 +8,15 @@ export class DatabaseService {
 
     postList$: AngularFireList<any>;
 
+
     constructor(private database: AngularFireDatabase) { // aquí se engancha la base de datos
       this.postList$ = this.database.list('/posts');
     }
+
+    getUsers() {
+     return this.database.list('/users').valueChanges();
+    }
+
     addData(path, object) {
       this.database.list(path).push(object);
     }

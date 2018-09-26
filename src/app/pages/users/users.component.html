@@ -1,0 +1,11 @@
+<div>
+  <div *ngFor="let user of users$ | async">
+    <div class="row">
+      <div class="col color">
+          {{user.email}}
+
+      </div>
+    </div>
+
+  </div>
+</div>
