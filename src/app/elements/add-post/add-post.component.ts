@@ -42,6 +42,7 @@ export class AddPostComponent{
       const newPost = {
         contenido: this.postForm.value.content,
         user: this.authService.user.email,
+        userUid: this.authService.user.uid,
         likes: 0,
         time
       };
@@ -51,6 +52,7 @@ export class AddPostComponent{
       const newPost = {
         contenido: this.postForm.value.content,
         user: this.authService.user.email,
+        userUid: this.authService.user.uid,
         likes: 0,
         time,
         image : this.image

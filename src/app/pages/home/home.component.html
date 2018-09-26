@@ -5,11 +5,12 @@
                 <button mat-icon-button (click)="snav.toggle()">
             <i class="material-icons">
               menu
-              </i><img src="../assets/img/logo.png" alt="">
+              </i><img  src="../assets/img/logo.png" alt="">
           </button>
             </a>
         </div>
         <div class="col col-md-8 p-3 text-right" *ngIf="authService.user">
+            <img class="image-user rounded-circle shadow-sm border border-white " src="{{authService.user.photoURL}}" alt="">
             <span> {{authService.user.email}}</span>
         </div>
     </mat-toolbar>

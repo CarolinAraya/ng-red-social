@@ -12,8 +12,10 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class SinglePostComponent implements OnInit{
   @Input() post;
   @Input() postId;
+
   enableEditPost = true;
   editContent: FormGroup;
+  user: any
 
   constructor(private formBuilder: FormBuilder, private DatabaseService: DatabaseService) {
     this.createEditContentForm();
@@ -23,11 +25,11 @@ export class SinglePostComponent implements OnInit{
       content: ['', Validators.required],
     });
   }
-
   ngOnInit(): void {
     this.editContent.patchValue({
       content: this.post.contenido
     });
+    this.user = this.DatabaseService.getIndividualData('users/' + this.post.userUid)
   }
 
   deletePost(key){

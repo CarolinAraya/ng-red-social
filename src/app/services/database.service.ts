@@ -17,6 +17,9 @@ export class DatabaseService {
     getData(){
        return this.postList$.snapshotChanges()
     }
+    getIndividualData(path){
+      return this.database.object(path).valueChanges();
+    }
     deleteData(key){
       this.database.object(`posts/${key}`).remove();
     }

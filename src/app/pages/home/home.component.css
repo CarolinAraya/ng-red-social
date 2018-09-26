@@ -1,86 +1,88 @@
 .body {
-  background-color: #f0f1ef;
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
+    background-color: #f0f1ef;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+.image-user {
+    height: 40px;
 }
 
 header {
-  background: #fff;
-  padding: 8px 0;
-  font-size: 16px;
+    background: #fff;
+    padding: 8px 0;
+    font-size: 16px;
 }
 
 header div #profile {
-  padding-top: 10px;
-  text-align: right;
+    padding-top: 10px;
+    text-align: right;
 }
 
 .logo img {
-  height: 30px;
-  margin: 0 8px
+    height: 30px;
+    margin: 0 8px
 }
 
 .home-container {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
-.sidenav-container{
-  left: 0;
+.sidenav-container {
+    left: 0;
 }
 
 .home-toolbar {
-  z-index: 2;
+    z-index: 2;
 }
 
 .home-sidenav-container {
-  flex: 1;
+    flex: 1;
 }
 
 .mat-drawer {
-  background-color: green;
-  color: #e3f2d3;
-  padding: 3rem;
+    background-color: green;
+    color: #e3f2d3;
+    padding: 3rem;
 }
 
 .text-right {
-  text-align: right!important;
-  font-size: 15px !important;
+    text-align: right!important;
+    font-size: 15px !important;
 }
 
 .mat-list-item {
-  color: #e3f2d3 !important;
-  font-size: 20px;
+    color: #e3f2d3 !important;
+    font-size: 20px;
 }
 
 .fa-edit:before {
-  content: "\f044";
-  padding: 10px;
+    content: "\f044";
+    padding: 10px;
 }
 
 .fa-user:before {
-  content: "\f007";
-  padding: 10px;
+    content: "\f007";
+    padding: 10px;
 }
 
 .fa-users:before {
-  content: "\f0c0";
-  padding: 10px;
+    content: "\f0c0";
+    padding: 10px;
 }
 
 .fa-envelope:before {
-  content: "\f0e0";
-  padding: 10px;
+    content: "\f0e0";
+    padding: 10px;
 }
 
 .fa-sign-out-alt:before {
-  content: "\f2f5";
-  padding: 10px;
+    content: "\f2f5";
+    padding: 10px;
 }
-
-
