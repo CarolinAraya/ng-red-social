@@ -1,3 +1,14 @@
+.face-button {
+    margin-top: 5px;
+    background: blue !important;
+}
+
+.google-button {
+  margin-top: 5px;
+  background: red !important;
+}
+
+
 .start-up-main-container {
   background: #fff;
   height: 100%;
