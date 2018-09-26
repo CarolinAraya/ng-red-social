@@ -3,12 +3,14 @@
         <div class="col-4 col-md-3 logo">
             <a class="float-left">
                 <button mat-icon-button (click)="snav.toggle()">
-            <img src="../assets/img/logo.png" alt="">
+            <i class="material-icons">
+              menu
+              </i><img src="../assets/img/logo.png" alt="">
           </button>
             </a>
         </div>
         <div class="col col-md-8 p-3 text-right" *ngIf="authService.user">
-            <span>Bienvenido : {{authService.user.email}}</span>
+            <span> {{authService.user.email}}</span>
         </div>
     </mat-toolbar>
     <mat-sidenav-container class="home-sidenav-container pl-7 pr-7" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
@@ -29,7 +31,7 @@
 
         <mat-sidenav-content>
             <div class="container">
-                <div class="col col-md-7 mx-auto mt-4">
+                <div class="col col-md-9 col-12 mx-auto mt-4">
                     <router-outlet></router-outlet>
                 </div>
             </div>

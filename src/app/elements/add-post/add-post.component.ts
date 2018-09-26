@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { DatabaseService } from '../../services/database.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
+import { AngularFireStorage } from '@angular/fire/storage';
+
 
 @Component({
   selector: 'app-add-post',
@@ -10,23 +12,52 @@ import { AuthService } from '../../services/auth.service';
 })
 export class AddPostComponent{
   postForm: FormGroup;
-  constructor(private authService: AuthService, private database: DatabaseService, private formBuilder: FormBuilder) {
+  image: any;
+  currentUploadProgress:number = -1;
+  constructor(private authService: AuthService, private database: DatabaseService, private formBuilder: FormBuilder, private storage: AngularFireStorage) {
     this.createPostForm();
   }
+
   createPostForm() {
     this.postForm = this.formBuilder.group({
       content: ['', Validators.required],
+      imageInput: []
     });
   }
+  uploadFile(event) {
+    let task = this.storage.upload(event.target.files[0].name, event.target.files[0]);
+    task.percentageChanges().subscribe((value)=>{
+      this.currentUploadProgress = value;
+    })
+    this.storage.ref(event.target.files[0].name).getDownloadURL().subscribe((downloadURLValue)=>{
+      this.image = downloadURLValue;
+      console.log('esta es la url ' + JSON.stringify(downloadURLValue));
+    })
+  }
+
   addPost() {
     let time = new Date().toLocaleString()
-    const newPost = {
-      contenido: this.postForm.value.content,
-      user: this.authService.user.email,
-      likes: 0,
-      time
-    };
-    this.database.addData('posts', newPost);
+
+    if (this.currentUploadProgress < 0){
+      const newPost = {
+        contenido: this.postForm.value.content,
+        user: this.authService.user.email,
+        likes: 0,
+        time
+      };
+      this.database.addData('posts', newPost);
+    }
+    if (this.currentUploadProgress == 100) {
+      const newPost = {
+        contenido: this.postForm.value.content,
+        user: this.authService.user.email,
+        likes: 0,
+        time,
+        image : this.image
+      };
+      this.database.addData('posts', newPost);
+    }
+    
     this.postForm.reset();
   }
 }

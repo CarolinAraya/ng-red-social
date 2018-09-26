@@ -1,0 +1,74 @@
+.profile h2 {
+    font-family: 'Exo', sans-serif;
+    text-align: center;
+    margin: 2rem;
+}
+
+.profile-data i {
+    color: #5cab31;
+    font-size: 1.5rem;
+    text-align: right;
+}
+
+.profile-photo-list {
+    width: 80px;
+    margin: 5px;
+    float: left;
+}
+
+.profile-photo {
+    border-radius: 100%;
+    padding: 5px;
+}
+
+.profile-data {
+    background: #fff;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #efebeb;
+    border-radius: 6px;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* ===== Perfil ==== */
+
+.infoProfile {
+    border: none;
+    background: none;
+    color: #3d3c3c;
+    margin-left: 5px;
+}
+
+.botones {
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    color: #fff;
+    line-height: 1.5;
+    border-radius: .25rem;
+}
+
+.botones:hover {
+    cursor: pointer;
+}
+
+#enabledRol:hover {
+    background: #c7c8ca;
+}
+
+#enabledCountry {
+    float: right;
+}
+
+#enabledCountry:hover {
+    background: #c7c8ca;
+}
+
+#userName {
+    font-weight: bold;
+    font-size: 20px;
+}

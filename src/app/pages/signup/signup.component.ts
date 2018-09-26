@@ -36,11 +36,7 @@ export class SignupComponent implements OnInit {
       })
       .catch(error => {
 
-<<<<<<< 4342614c6da3055bc2f236b027267dd40f0819df
         alert(error.message);
-=======
-        alert("Error, intenta otra vez");
->>>>>>> cambios de caro -sidenav
       });
   }
 

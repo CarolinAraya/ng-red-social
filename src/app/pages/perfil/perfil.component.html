@@ -1,3 +1,29 @@
-<div class="row">
-    Perfil works!
+<div class="row profile">
+    <div class="col-12 center">
+        <div class="text-center">
+            <img class="shadow rounded-circle border border-white" src="../../../assets/img/user-default.png " alt=" "></div>
+        <h2> {{authService.user.email}}</h2>
+    </div>
+</div>
+
+<div class="row ">
+    <div class="col profile-data profile-icon ">
+        <i class="far fa-user-circle "></i>
+        <input class="infoProfile " id="rol " disabled>
+        <i class="far fa-edit " id="enabledRol "></i>
+    </div>
+</div>
+<div class="row ">
+    <div class="col profile-data profile-icon ">
+        <i class="far fa-envelope "></i>
+        <span class="infoProfile " id="userEmail "></span>
+    </div>
+</div>
+<div class="row ">
+    <div class="col profile-data profile-icon ">
+        <i class="fas fa-globe-americas "></i>
+        <input class="infoProfile " id="country " disabled>
+        <i class="far fa-edit profile-icon " id="enabledCountry "></i>
+
+    </div>
 </div>

@@ -2,6 +2,8 @@
     <div class="col">
         <form [formGroup]="postForm" (ngSubmit)="addPost()">
             <textarea #description formControlName="content" placeholder="¿Qué te gustaría publicar?"></textarea>
+            <input type="file" formControlName="imageInput" (change)="uploadFile($event)" />
+            <p *ngIf="currentUploadProgress > 0">{{currentUploadProgress}}</p>
             <button type="submit" id="btn-publicar" [disabled]="!postForm.valid">Publicar</button>
         </form>
     </div>

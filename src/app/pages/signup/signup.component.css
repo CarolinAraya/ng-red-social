@@ -1,70 +1,70 @@
 .start-up-main-container {
-    background: #fff;
-    height: 100%;
-    overflow: auto;
+  background: #fff;
+  height: 100%;
+  overflow: auto;
 }
 
 .start-up-main-panel {
-    margin: auto;
-    width: 80%;
-    max-width: 300px;
-    padding-top: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+  margin: auto;
+  width: 80%;
+  max-width: 300px;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .start-up-main-image {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .start-up-image {
-    height: 60px;
+  height: 60px;
 }
 
 .signup-form {
-    margin-top: 40px;
+  margin-top: 40px;
 }
 
 .signup-form-body {
-    padding: 10px;
-    background: white;
+  padding: 10px;
+  background: white;
 }
 
 .signup-form-content-control {
-    margin: 10px;
+  margin: 10px;
 }
 
 .signup-form-control {
-    width: 100%;
+  width: 100%;
 }
 
 .signup-form-submit-button {
-    background: green;
-    color: white;
-    height: 50px;
+  background: green;
+  color: white;
+  height: 50px;
 }
 
 .signup-prefix-icon {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .signup-form-footer {
-    margin: 0;
+  margin: 0;
 }
 
 .signup-container {
-    margin-top: 20px;
-    margin-bottom: 30px;
-    text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .signup-text {
-    color: green;
+  color: green;
 }
 
 .signup-button {
-    color: green;
-    margin-left: 7px;
+color: green;
+margin-left: 7px;
 }

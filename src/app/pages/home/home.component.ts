@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
 
 
-  constructor(private route: ActivatedRoute, changeDetectorRef: ChangeDetectorRef, media: MediaMatcher, private router: Router, private authService: AuthService) {
+  constructor(private route: ActivatedRoute, changeDetectorRef: ChangeDetectorRef, media: MediaMatcher, private router: Router, public authService: AuthService) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this.mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this.mobileQueryListener);
