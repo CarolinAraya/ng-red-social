@@ -1,6 +1,18 @@
 .face-button {
     margin-top: 5px;
-    background: blue !important;
+    background: #4267b2 !important;
+    border-bottom: 1px solid #29487d;
+}
+
+.fa-facebook-f:before {
+  content: "\f39e";
+  margin: 7px;
+  /* size: b5; */
+}
+
+.fa-google:before {
+  content: "\f1a0";
+  margin: 9px;
 }
 
 .google-button {
@@ -54,7 +66,7 @@
 .login-form-submit-button {
   background: green;
   color: #fff;
-  height: 50px;
+  height: 35px;
 }
 
 .login-prefix-icon {
