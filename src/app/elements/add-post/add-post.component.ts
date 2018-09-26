@@ -31,13 +31,12 @@ export class AddPostComponent{
     })
     this.storage.ref(event.target.files[0].name).getDownloadURL().subscribe((downloadURLValue)=>{
       this.image = downloadURLValue;
-      console.log('esta es la url ' + JSON.stringify(downloadURLValue));
     })
   }
 
   addPost() {
+    console.log('holsssd')
     let time = new Date().toLocaleString()
-
     if (this.currentUploadProgress < 0){
       const newPost = {
         contenido: this.postForm.value.content,

@@ -4,6 +4,7 @@
     </div>
     <div class="col-9">
         <h4>{{(user | async)?.displayName}}</h4>
+        <span class="bg-info rounded text-white p-1">{{(user | async)?.rol}}</span>
     </div>
 </div>
 <div class="row">
@@ -18,8 +19,8 @@
             <div class="d-flex justify-content-between align-items-center box-icons">
                 <span>{{post.time}}</span>
                 <span><i class="fas fa-thumbs-up iconPost " (click)="addLike(postId, post.likes) "></i>{{post.likes}}</span>
-                <i class="far fa-edit iconPost " (click)="enableEdit() "></i>
-                <i class="far fa-trash-alt iconPost " (click)="deletePost(postId) "></i>
+                <i *ngIf="post.userUid === AuthService.user.uid" class=" far fa-edit iconPost " (click)=" enableEdit() "></i>
+                <i *ngIf="post.userUid === AuthService.user.uid" class="far fa-trash-alt iconPost " (click)="deletePost(postId) "></i>
             </div>
             <button *ngIf="!enableEditPost" type="submit">editar</button>
         </form>

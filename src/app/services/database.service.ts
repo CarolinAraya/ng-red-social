@@ -23,7 +23,7 @@ export class DatabaseService {
     deleteData(key){
       this.database.object(`posts/${key}`).remove();
     }
-    updateData(key, object){
-      this.database.object(`posts/${key}`).update(object);
+    updateData(path, object){
+      this.database.object(path).update(object);
     }
 }

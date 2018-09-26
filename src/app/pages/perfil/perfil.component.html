@@ -1,29 +1,25 @@
-<div class="row profile">
-    <div class="col-12 center">
-        <div class="text-center">
-            <img class="shadow rounded-circle border border-white" src="../../../assets/img/user-default.png " alt=" "></div>
-        <h2> {{authService.user.email}}</h2>
-    </div>
-</div>
+<div class="profile">
 
-<div class="row ">
-    <div class="col profile-data profile-icon ">
-        <i class="far fa-user-circle "></i>
-        <input class="infoProfile " id="rol " disabled>
-        <i class="far fa-edit " id="enabledRol "></i>
-    </div>
-</div>
-<div class="row ">
-    <div class="col profile-data profile-icon ">
-        <i class="far fa-envelope "></i>
-        <span class="infoProfile " id="userEmail "></span>
-    </div>
-</div>
-<div class="row ">
-    <div class="col profile-data profile-icon ">
-        <i class="fas fa-globe-americas "></i>
-        <input class="infoProfile " id="country " disabled>
-        <i class="far fa-edit profile-icon " id="enabledCountry "></i>
 
+    <div class="row">
+        <div class="col-12 center">
+            <div class="text-center">
+                <img width="200" class="foto shadow rounded-circle  border-white" src="{{(user | async)?.photoUrl}}" alt=" "></div>
+            <h2> {{(user | async)?.displayName}}</h2>
+        </div>
     </div>
+
+    <div class="row ">
+        <div class="col profile-data profile-icon ">
+            <i class="far fa-user-circle icons-profile"></i> {{(user | async)?.rol}}
+            <i class="fas fa-pen icon-edit" (click)="rolEdit()"></i>
+        </div>
+    </div>
+    <div class="row ">
+        <div class="col profile-data profile-icon ">
+            <i class="far fa-envelope icons-profile"></i>
+            <span>{{(user | async)?.email}}</span>
+        </div>
+    </div>
+
 </div>

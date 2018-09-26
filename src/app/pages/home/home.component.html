@@ -11,7 +11,7 @@
         </div>
         <div class="col col-md-8 p-3 text-right" *ngIf="authService.user">
             <img class="image-user rounded-circle shadow-sm border border-white " src="{{authService.user.photoURL}}" alt="">
-            <span> {{authService.user.email}}</span>
+            <span> {{authService.user.displayName || authService.user.email}}</span>
         </div>
     </mat-toolbar>
     <mat-sidenav-container class="home-sidenav-container pl-7 pr-7" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">

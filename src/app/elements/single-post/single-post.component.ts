@@ -2,7 +2,7 @@ import { Component, OnInit, Input, SimpleChanges, OnChanges } from '@angular/cor
 import { Router } from '@angular/router';
 import { DatabaseService } from '../../services/database.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-single-post',
@@ -17,7 +17,7 @@ export class SinglePostComponent implements OnInit{
   editContent: FormGroup;
   user: any
 
-  constructor(private formBuilder: FormBuilder, private DatabaseService: DatabaseService) {
+  constructor(private formBuilder: FormBuilder, private DatabaseService: DatabaseService, private AuthService: AuthService) {
     this.createEditContentForm();
    }
   createEditContentForm() {
@@ -39,12 +39,12 @@ export class SinglePostComponent implements OnInit{
   }
   addLike(key, likes){
     likes++
-    this.DatabaseService.updateData(key, { likes: likes++ })
+    this.DatabaseService.updateData('posts/' + key, { likes: likes })
   }
   enableEdit() {
     this.enableEditPost = false;
   }
   editPost(key){
-    this.DatabaseService.updateData(key, { contenido: this.editContent.value.content})
+    this.DatabaseService.updateData('posts/' + key, { contenido: this.editContent.value.content})
   }
 }

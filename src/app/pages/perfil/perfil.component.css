@@ -1,13 +1,25 @@
+.icon-edit {
+    color: #9c9797;
+    font-size: 1rem;
+    float: right;
+    padding-top: 0.5rem;
+}
+
 .profile h2 {
     font-family: 'Exo', sans-serif;
     text-align: center;
     margin: 2rem;
 }
 
-.profile-data i {
+.icons-profile {
     color: #5cab31;
     font-size: 1.5rem;
+    margin-right: 1rem;
     text-align: right;
+}
+
+.foto {
+    border: 10px solid #fff;
 }
 
 .profile-photo-list {
@@ -30,14 +42,16 @@
     font-family: 'Roboto', sans-serif;
 }
 
-
-/* ===== Perfil ==== */
-
-.infoProfile {
+.profile-data span {
     border: none;
     background: none;
     color: #3d3c3c;
     margin-left: 5px;
+}
+
+.profile-data textarea {
+    background: none;
+    border: none;
 }
 
 .botones {

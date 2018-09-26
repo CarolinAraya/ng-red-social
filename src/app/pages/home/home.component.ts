@@ -8,20 +8,14 @@ import { AuthService } from '../../services/auth.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit, OnDestroy {
+export class HomeComponent implements OnDestroy {
   public mobileQuery: MediaQueryList;
   private mobileQueryListener: () => void;
-
-
 
   constructor(private route: ActivatedRoute, changeDetectorRef: ChangeDetectorRef, media: MediaMatcher, private router: Router, public authService: AuthService) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this.mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this.mobileQueryListener);
-  }
-
-  ngOnInit() {
-
   }
 
   ngOnDestroy(): void {
