@@ -1,11 +1,24 @@
-<div>
-  <div *ngFor="let user of users$ | async">
-    <div class="row">
-      <div class="col color">
-          {{user.email}}
-
-      </div>
+<div *ngFor="let user of users$ | async" class="color">
+  <div class="row postTop col-9">
+    <div class="col-auto foto">
+      <img class="profile-comment" width="30" src="../../assets/img/user-default.png">
     </div>
-
+    <form [formGroup]="" >
+      <div class="col-9">
+        <h6>{{user.displayName}}</h6>
+      </div>
+      <div>
+        <div class="row">
+          <div class="col ">
+            <p>{{user.email}}</p>
+            <div>
+              <button (click)="addFriend(user)">+ agregar amig@</button>
+              <button>Ver perfil</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
   </div>
+
 </div>

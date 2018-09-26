@@ -9,7 +9,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   templateUrl: './single-post.component.html',
   styleUrls: ['./single-post.component.css']
 })
-export class SinglePostComponent implements OnInit{
+export class SinglePostComponent implements OnInit {
   @Input() post;
   @Input() postId;
   enableEditPost = true;
@@ -17,7 +17,7 @@ export class SinglePostComponent implements OnInit{
 
   constructor(private formBuilder: FormBuilder, private DatabaseService: DatabaseService) {
     this.createEditContentForm();
-   }
+  }
   createEditContentForm() {
     this.editContent = this.formBuilder.group({
       content: ['', Validators.required],
@@ -30,19 +30,20 @@ export class SinglePostComponent implements OnInit{
     });
   }
 
-  deletePost(key){
-    if(confirm('Estas seguro?')){
+  deletePost(key) {
+    if (confirm('Estas seguro?')) {
       this.DatabaseService.deleteData(key)
     }
   }
-  addLike(key, likes){
+  addLike(key, likes) {
     likes++
     this.DatabaseService.updateData(key, { likes: likes++ })
   }
   enableEdit() {
     this.enableEditPost = false;
   }
-  editPost(key){
-    this.DatabaseService.updateData(key, { contenido: this.editContent.value.content})
+
+  editPost(key) {
+    this.DatabaseService.updateData(key, { contenido: this.editContent.value.content })
   }
 }
