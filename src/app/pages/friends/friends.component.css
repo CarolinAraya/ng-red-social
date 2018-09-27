@@ -1,6 +1,22 @@
-.color {
-  background: white;
+.container-friend {
+  background-color: #f6f3f3;
   margin: 10px;
   border-radius: 12px;
-  height: 150px;
+}
+
+
+.mat-flat-button, .mat-raised-button, .mat-fab, .mat-mini-fab {
+  font-size: 14px;
+  float: right;
+  margin: 10px;
+  font-family: 'Roboto', sans-serif;
+  background: #e13857;
+  color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.profile-photo {
+  border: 3px solid #fff;
+  width: 100%;
 }

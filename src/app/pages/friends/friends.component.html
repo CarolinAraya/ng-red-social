@@ -1,23 +1,20 @@
-<div *ngFor="let friend of friends$ | async" class="color">
-  <div class="row postTop col-9">
-    <div class="col-auto foto">
-      <img class="profile-comment" width="30" src="../../assets/img/user-default.png">
-    </div>
-    <form [formGroup]="" >
-      <div class="col-9">
-        <h6>{{friend.name}}</h6>
+<div *ngFor="let friend of friends$ | async" class="container-friend">
+  <div class="row container-friend ">
+    <div class="col-3">
+      <div class="mt-3 pl-3">
+        <img width="30" class="rounded-circle shadow-sm profile-photo" src="../../assets/img/user-default.png">
       </div>
-      <div>
-        <div class="row">
-          <div class="col ">
-            <p>{{friend.email}}</p>
-
-            <div>
-              <button>Ver perfil</button>
-            </div>
+    </div>
+    <div class="col-9 mt-3">
+      <h6>{{friend.name}}</h6>
+      <div class="row">
+        <div>
+          <p>{{friend.email}}</p>
+          <div>
+            <button text-right mat-raised-button>Ver perfil</button>
           </div>
         </div>
       </div>
-    </form>
+    </div>
   </div>
 </div>
