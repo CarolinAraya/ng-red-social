@@ -1,0 +1,23 @@
+<div *ngFor="let friend of friends$ | async" class="color">
+  <div class="row postTop col-9">
+    <div class="col-auto foto">
+      <img class="profile-comment" width="30" src="../../assets/img/user-default.png">
+    </div>
+    <form [formGroup]="" >
+      <div class="col-9">
+        <h6>{{friend.name}}</h6>
+      </div>
+      <div>
+        <div class="row">
+          <div class="col ">
+            <p>{{friend.email}}</p>
+
+            <div>
+              <button>Ver perfil</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
