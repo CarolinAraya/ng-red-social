@@ -20,28 +20,20 @@ export class DatabaseService {
     }
  */
     getUsers() { // Devolverá la Data completa adecuada
-
       return this.database.list('/users').snapshotChanges().pipe(map( //mapeo el contenido sanapshot para modificarlo
 
         snapshotUsers => {//lo que me retorna
-
           const result = [];
 
           for (let i = 0; i < snapshotUsers.length; i++) {
-
             const snapshotUser = snapshotUsers[i];
-
             const userValue = snapshotUser.payload.val(); // transformo el payload,
-
             userValue['key'] = snapshotUser.payload.key; // Le agrego la key(uid correspondiente) al objeto que creé, esta tipado {}
             //(<any>userValue).key = snapshotUser.payload.key;
 
             result.push(userValue);
-
           }
-
           return result;
-
         }));
     }
 
