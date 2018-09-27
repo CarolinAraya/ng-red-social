@@ -7,6 +7,7 @@ import { PerfilComponent } from './pages/perfil/perfil.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { AuthGuard } from './services/auth.guard';
 import { UsersComponent } from './pages/users/users.component';
+import { FriendsComponent } from './pages/friends/friends.component';
 
 export const routes: Routes = [
   {
@@ -32,6 +33,7 @@ export const routes: Routes = [
       { path: 'posts', component: PostContainerComponent },
       { path: 'profile', component: PerfilComponent },
       { path: 'users', component: UsersComponent },
+      { path: 'friends', component: FriendsComponent },
       { path: '', redirectTo: '/home/posts', pathMatch: 'prefix' },
       { path: '**', redirectTo: '/home/posts', pathMatch: 'prefix' },
     ]

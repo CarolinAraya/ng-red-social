@@ -45,6 +45,7 @@ import { SinglePostComponent } from './elements/single-post/single-post.componen
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { UsersComponent } from './pages/users/users.component';
+import { FriendsComponent } from './pages/friends/friends.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { UsersComponent } from './pages/users/users.component';
     PerfilComponent,
     AddPostComponent,
     SignupComponent,
-    UsersComponent
+    UsersComponent,
+    FriendsComponent,
   ],
   imports: [
     BrowserModule,
