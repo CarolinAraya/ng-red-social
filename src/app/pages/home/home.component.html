@@ -1,17 +1,18 @@
 <div class="home-container" [class.example-is-mobile]="mobileQuery.matches">
   <mat-toolbar class="home-toolbar">
-      <div class="col-4 col-md-3 logo">
-        <a class="float-left">
-          <button mat-icon-button (click)="snav.toggle()">
-            <i class="material-icons menu-icon">
-              menu
-              </i><img src="../assets/img/logo.png" alt="">
-          </button>
-        </a>
-      </div>
-      <div class="col col-md-8 p-3 text-right" *ngIf="authService.user">
-        <span> {{authService.user.email}}</span>
-      </div>
+    <div class="col-4 col-md-3 logo">
+      <a class="float-left">
+        <button mat-icon-button (click)="snav.toggle()">
+          <i class="material-icons menu-icon">
+            menu
+          </i>
+          <img src="../assets/img/logo.png" alt="">
+        </button>
+      </a>
+    </div>
+    <div class="col col-md-8 p-3 text-right" *ngIf="authService.user">
+      <span> {{authService.user.email}}</span>
+    </div>
   </mat-toolbar>
   <mat-sidenav-container class="home-sidenav-container pl-7 pr-7" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
     <mat-sidenav color="primary" #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
@@ -23,6 +24,8 @@
           <i class="fas fa-user"></i>Perfil</a>
         <a mat-list-item routerLink="/home/users">
           <i class="fas fa-users"></i>Lista de Usuarios</a>
+        <a mat-list-item  routerLink="/home/friends">
+          <i class="fas fa-users"></i>Amigos</a>
         <a mat-list-item>
           <i class="fas fa-envelope"></i>Mensajes</a>
         <a mat-list-item (click)="logout()">

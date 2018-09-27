@@ -13,7 +13,7 @@ export class UsersComponent implements OnInit {
   users$;// Para el ngFor
 
   constructor(private database: DatabaseService, private authService: AuthService) {
-    this.users$ = database.getUsers(); //Llamo a la función que está en database.service
+    this.users$ = database.getUsers(`/users`); //Llamo a la función que está en database.service
   }
 
   ngOnInit() {
