@@ -6,9 +6,11 @@ import * as firebase from 'firebase';
 @Injectable({
   providedIn: 'root'
 })
+
 export class AuthService {
-  [x: string]: any;
+
   user: any = null;
+
   constructor(private firebaseAuth: AngularFireAuth) {
     this.firebaseAuth.authState.subscribe((auth) => {
       this.user = auth;

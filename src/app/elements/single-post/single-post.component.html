@@ -1,28 +1,29 @@
-<div class="row postTop">
-    <div class="col-auto foto">
-        <img class="rounded-circle shadow-sm border border-white" width="40" src="{{(user | async)?.photoUrl}}">
+<div class="post shadow-sm">
+    <div class="row">
+        <div class="pl-3">
+            <img width="60" class="rounded-circle shadow-sm profile-photo" src="{{(user | async)?.photoUrl}}">
+        </div>
+        <div class="pl-4">
+            <h4>{{(user | async)?.displayName}}</h4>
+            <span class="rol">{{(user | async)?.rol}}</span>
+        </div>
     </div>
-    <div class="col-9">
-        <h4>{{(user | async)?.displayName}}</h4>
-        <span class="bg-info rounded text-white p-1">{{(user | async)?.rol}}</span>
-    </div>
-</div>
-<div class="row">
-    <div class="col" id="container-post">
-        <form [formGroup]="editContent" (ngSubmit)="editPost(postId)">
-            <div *ngIf="post.image" class="row postImageDiv">
-                <div class="col">
-                    <img class="img-post" src="{{post.image}}">
+    <div class="row">
+        <div class="col">
+            <form [formGroup]="editContent" (ngSubmit)="editPost(postId)">
+                <div *ngIf="post.image" class="row postImageDiv">
+                    <div class="col">
+                        <img class="img-post mt-2" src="{{post.image}}">
+                    </div>
                 </div>
-            </div> `
-            <textarea #content formControlName="content" class="col-12 col-md-12" [attr.disabled]="enableEditPost ? '' : null" [style.height.px]="post.contenido.length"></textarea>
-            <div class="d-flex justify-content-between align-items-center box-icons">
-                <span>{{post.time}}</span>
-                <span><i class="fas fa-thumbs-up iconPost " (click)="addLike(postId, post.likes) "></i>{{post.likes}}</span>
-                <i *ngIf="post.userUid === AuthService.user.uid" class=" far fa-edit iconPost " (click)=" enableEdit() "></i>
-                <i *ngIf="post.userUid === AuthService.user.uid" class="far fa-trash-alt iconPost " (click)="deletePost(postId) "></i>
-            </div>
-            <button *ngIf="!enableEditPost" type="submit">editar</button>
-        </form>
+                <textarea #content formControlName="content" class="col-12 col-md-12" [attr.disabled]="enableEditPost ? '' : null" [style.height.px]="post.contenido.length"></textarea>
+                <div class="d-flex justify-content-between align-items-center box-icons">
+                    <span class="time">{{post.time}}</span>
+                    <span><i class="fas fa-thumbs-up iconPost " (click)="addLike(postId, post.likes) "></i>{{post.likes}}</span>
+                    <i *ngIf="post.userUid === AuthService.user.uid" class=" far fa-edit iconPost " (click)=" enableEdit() "></i>
+                    <i *ngIf="post.userUid === AuthService.user.uid" class="far fa-trash-alt iconPost " (click)="deletePost(postId) "></i>
+                </div>
+                <button *ngIf="!enableEditPost" type="submit">editar</button>
+            </form>
+        </div>
     </div>
-</div>

@@ -1,13 +1,15 @@
-<div class="row publicar">
-    <div class="col">
-        <form [formGroup]="postForm" (ngSubmit)="addPost()">
-            <textarea #description formControlName="content" placeholder="¿Qué te gustaría publicar?"></textarea>
-            <input class="inputfile" id="file" type="file" formControlName="imageInput" (change)="uploadFile($event)" />
-            <!-- <label for="file">
-  <i class="fas fa-image"></i>
-</label> -->
-            <p *ngIf="currentUploadProgress > 0">{{currentUploadProgress}}</p>
-            <button type="submit" id="btn-publicar" [disabled]="!postForm.valid">Publicar</button>
-        </form>
-    </div>
+<div class="col publicar">
+    <form [formGroup]="postForm" (ngSubmit)="addPost()">
+        <textarea #description formControlName="content" placeholder="¿Qué te gustaría publicar, {{authService.user.displayName || authService.user.email}}?"></textarea>
+        <div class="row footer">
+            <div class="col">
+                <label class="custom-file-upload pt-2">
+                <input type="file" formControlName="imageInput" (change)="uploadFile($event)" />
+                <i class="fas fa-image float-right"></i>
+                 </label>
+                <p *ngIf="currentUploadProgress > 0">{{currentUploadProgress}}</p>
+                <button class="float-right" type="submit" id="btn-publicar" [disabled]="!postForm.valid">Publicar</button>
+            </div>
+        </div>
+    </form>
 </div>

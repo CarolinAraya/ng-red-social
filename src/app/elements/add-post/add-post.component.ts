@@ -35,7 +35,6 @@ export class AddPostComponent{
   }
 
   addPost() {
-    console.log('holsssd')
     let time = new Date().toLocaleString()
     if (this.currentUploadProgress < 0){
       const newPost = {
@@ -60,5 +59,6 @@ export class AddPostComponent{
     }
     
     this.postForm.reset();
+    this.currentUploadProgress = -1;
   }
 }
