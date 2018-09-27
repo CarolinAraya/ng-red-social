@@ -2,8 +2,26 @@
   background: white;
   margin: 10px;
   border-radius: 12px;
-  height: 150px;
+}
+.button-container {
+  padding: 10px;
 }
 
+.mat-flat-button, .mat-raised-button, .mat-fab, .mat-mini-fab {
+  font-size: 14px;
+  float: right;
+  margin: 10px;
+  font-family: 'Roboto', sans-serif;
+  background: #82b43f;
+  color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+
+
+.profile-button {
+  background: #e13857 !important;
+}
 
 

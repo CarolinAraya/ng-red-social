@@ -15,7 +15,7 @@ export class FriendsComponent implements OnInit {
 
   constructor(private database: DatabaseService, private authService: AuthService) {
 
-    this.friends$ = database.getUsers(`/users/${this.authService.user.uid}/amigos`);
+    this.friends$ = database.getUsers(`/users/${this.authService.user.uid}/amigos`)
   }
   ngOnInit() {
   }

@@ -10,17 +10,18 @@ import { AuthService } from '../../services/auth.service';
 })
 export class UsersComponent implements OnInit {
 
-  users$;// Para el ngFor
+  users$;
 
   constructor(private database: DatabaseService, private authService: AuthService) {
-    this.users$ = database.getUsers(`/users`); //Llamo a la función que está en database.service
+    this.users$ = database.getUsers(`/users`);
   }
 
   ngOnInit() {
   }
 
-  addFriend(user) { //parámetro que viene del ngFor
+  addFriend(user) {
     this.database.addFriendData(this.authService.user.uid, { // addFriendData(mi firebase-Key, objeto amigo q agregaré)
+      name: user.displayName,
       email: user.email,
       uid: user.key
     });
