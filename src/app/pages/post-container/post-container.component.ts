@@ -8,10 +8,7 @@ import { DatabaseService } from '../../services/database.service';
   styleUrls: ['./post-container.component.css']
 })
 export class PostContainerComponent {
-
   posts$;
-
   constructor(private router: Router, private database: DatabaseService) {
-
     this.posts$ = database.getData()  }
 }

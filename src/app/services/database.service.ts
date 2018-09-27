@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
-import { map } from 'rxjs/operators';
+import {map} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -9,16 +9,10 @@ export class DatabaseService {
 
     postList$: AngularFireList<any>;
 
-
-    constructor(private database: AngularFireDatabase) { // aquí se engancha la base de datos
-
+    constructor(private database: AngularFireDatabase) { 
       this.postList$ = this.database.list('/posts');
     }
 
-    /* getUsers() {
-     return this.database.list('/users').valueChanges(); //No me da la llave de los usuarios de mi lista
-    }
- */
     getUsers(path) {
       return this.database.list(path).snapshotChanges().pipe(map(
         snapshotUsers => {//lo que me retorna
@@ -35,24 +29,25 @@ export class DatabaseService {
           return result;
         }));
     }
-
     addData(path, object) {
       this.database.list(path).push(object);
     }
     getData(){
        return this.postList$.snapshotChanges()
     }
+    getIndividualData(path){
+      return this.database.object(path).valueChanges();
+    }
     deleteData(key){
       this.database.object(`posts/${key}`).remove();
     }
-    updateData(key, object){
-      this.database.object(`posts/${key}`).update(object);
+    updateData(path, object){
+      this.database.object(path).update(object);
     }
-
-    addFriendData(key, object){
-      this.database.list(`users/${key}/amigos`).push(object);
-    }
-
+  addFriendData(key, object) {
+    this.database.list(`users/${key}/amigos`).push(object);
+  }
 }
+
 
 

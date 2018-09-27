@@ -1,5 +1,25 @@
-<div class="row">
-    Perfil works!
+<div class="profile shadow">
+
+
+    <div class="row">
+        <div class="col-12 center">
+            <div class="text-center">
+                <img width="200" class="foto shadow rounded-circle  border-white" src="{{(user | async)?.photoUrl}}" alt=" "></div>
+            <h2> {{(user | async)?.displayName}}</h2>
+        </div>
+    </div>
+
+    <div class="row ">
+        <div class="col profile-data profile-icon ">
+            <i class="far fa-user-circle icons-profile"></i> {{(user | async)?.rol}}
+            <i class="fas fa-pen icon-edit" (click)="rolEdit()"></i>
+        </div>
+    </div>
+    <div class="row ">
+        <div class="col profile-data profile-icon ">
+            <i class="far fa-envelope icons-profile"></i>
+            <span>{{(user | async)?.email}}</span>
+        </div>
+    </div>
+
 </div>
-
-

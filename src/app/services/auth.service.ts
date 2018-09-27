@@ -12,10 +12,9 @@ export class AuthService {
   user: any = null;
 
   constructor(private firebaseAuth: AngularFireAuth) {
-    // this.user = firebaseAuth.authState;
     this.firebaseAuth.authState.subscribe((auth) => {
       this.user = auth;
-
+      console.log(this.user)
     });
   }
 
@@ -36,19 +35,14 @@ export class AuthService {
   }
 
   facebookLogin() {
-
     return this.firebaseAuth.auth.signInWithPopup(new firebase.auth.FacebookAuthProvider())
-
   }
 
   googleLogin() {
-
     let provider = new firebase.auth.GoogleAuthProvider();
-
     provider.addScope('profile');
     provider.addScope('email');
     return this.firebaseAuth.auth
       .signInWithPopup(provider)
-
   }
 }

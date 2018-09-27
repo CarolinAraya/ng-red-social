@@ -1,17 +1,17 @@
 <div class="home-container" [class.example-is-mobile]="mobileQuery.matches">
-  <mat-toolbar class="home-toolbar">
-    <div class="col-4 col-md-3 logo">
-      <a class="float-left">
-        <button mat-icon-button (click)="snav.toggle()">
-          <i class="material-icons menu-icon">
-            menu
-          </i>
-          <img src="../assets/img/logo.png" alt="">
-        </button>
-      </a>
-    </div>
-    <div class="col col-md-8 p-3 text-right" *ngIf="authService.user">
-      <span> {{authService.user.email}}</span>
+    <mat-toolbar class="home-toolbar">
+        <div class="col-4 col-md-3 logo">
+            <a class="float-left">
+                <button mat-icon-button (click)="snav.toggle()">
+            <i class="material-icons">
+              menu
+              </i><img  src="../assets/img/logo.png" alt="">
+          </button>
+            </a>
+        </div>
+        <div class="col col-md-8 p-3 text-right" *ngIf="authService.user">
+            <img class="image-user rounded-circle shadow-sm border border-white " src="{{authService.user.photoURL}}" alt="">
+            <span class="username"> {{authService.user.displayName || authService.user.email}}</span>
     </div>
   </mat-toolbar>
   <mat-sidenav-container class="home-sidenav-container pl-7 pr-7" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
@@ -37,8 +37,8 @@
       <div class="container">
         <div class="col-md-9 col-12 mx-auto mt-5">
           <router-outlet></router-outlet>
-        </div>
-      </div>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
+                </div>
+            </div>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
 </div>

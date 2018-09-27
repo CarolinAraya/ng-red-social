@@ -1,0 +1,93 @@
+.profile {
+    background-color: #efeded;
+    padding: 2rem;
+}
+
+.icon-edit {
+    color: #9c9797;
+    font-size: 1rem;
+    float: right;
+    padding-top: 0.5rem;
+}
+
+.profile h2 {
+    font-family: 'Exo', sans-serif;
+    text-align: center;
+    margin: 2rem;
+}
+
+.icons-profile {
+    color: #5cab31;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    text-align: right;
+}
+
+.foto {
+    border: 10px solid #fff;
+}
+
+.profile-photo-list {
+    width: 80px;
+    margin: 5px;
+    float: left;
+}
+
+.profile-photo {
+    border-radius: 100%;
+    padding: 5px;
+}
+
+.profile-data {
+    background: #fff;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #efebeb;
+    border-radius: 6px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.profile-data span {
+    border: none;
+    background: none;
+    color: #3d3c3c;
+    margin-left: 5px;
+}
+
+.profile-data textarea {
+    background: none;
+    border: none;
+}
+
+.botones {
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    color: #fff;
+    line-height: 1.5;
+    border-radius: .25rem;
+}
+
+.botones:hover {
+    cursor: pointer;
+}
+
+#enabledRol:hover {
+    background: #c7c8ca;
+}
+
+#enabledCountry {
+    float: right;
+}
+
+#enabledCountry:hover {
+    background: #c7c8ca;
+}
+
+#userName {
+    font-weight: bold;
+    font-size: 20px;
+}

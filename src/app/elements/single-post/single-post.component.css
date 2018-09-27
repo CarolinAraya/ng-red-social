@@ -1,76 +1,36 @@
-#container-post {
-    padding: 1em 0.5em;
-    border-bottom-right-radius: 0.4em;
-    border-bottom-left-radius: 0.4em;
-    background-color: #FFF;
+.post {
+    background-color: #f6f3f3;
     margin: 0 auto;
     margin-bottom: 20px;
+    border-radius: 8px;
+    padding: 1rem;
     color: #4E4D53;
     text-align: left;
 }
 
-#container-post textarea {
+.post h4 {
+    font-weight: bold;
+}
+
+.post textarea {
     max-height: 180px;
     min-height: 50px;
     background: none;
     border: none;
-}
-
-#container-post span {
-    margin-left: 1em;
+    padding-top: 0.5rem;
 }
 
 .img-post {
     width: 100%;
+    border: 9px solid #fff;
 }
 
-.publicacion {
-    margin-bottom: 20px;
+.time {
+    font-size: 1rem;
 }
 
-.foto {
-    padding-right: 0px;
-}
-
-.publicacion .foto a {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    overflow: hidden;
-    border-radius: 7px 7px 7px 7px;
-}
-
-.publicacion .foto img {
-    width: 100%;
-}
-
-.publicacion .nombre {
-    line-height: 16px;
-    display: inline-block;
-    margin-bottom: 10px;
-}
-
-.publicacion .texto {
-    background: #fff;
-    color: #3d3c3c;
-    margin-bottom: 3px;
-}
-
-.publicacion .texto p {
-    padding: 0;
-}
-
-.publicacion .post .box-icons {
-    margin-bottom: 20px;
-}
-
-.publicacion .post .box-iconss p {
-    margin-bottom: 0px;
-    color: #005D2F;
-}
-
-.publicacion .btn-edit {
-    text-align: right;
+.profile-photo {
+    border: 3px solid #fff;
 }
 
 #container-post button {
@@ -84,21 +44,14 @@
     cursor: pointer;
 }
 
-.publicacion button:hover {
-    background: #fff;
-}
-
-.publicacion div #publicar {
-    padding: 10px;
-}
-
-.postTop {
-    background: #fff;
-    border-top-right-radius: 0.4em;
-    border-top-left-radius: 0.4em;
-    padding-top: 20px;
-}
-
 .iconPost {
     color: #82b43f;
+}
+
+.rol {
+    border-radius: 5px;
+    background-color: #e13857;
+    font-size: 1.2rem;
+    padding: 3px;
+    color: #ffffff;
 }

@@ -1,3 +1,12 @@
+.publicar {
+    background-color: #ffffff;
+    border: 1px solid #d3cbcb;
+}
+
+.footer {
+    background-color: #f6f3f3;
+}
+
 .publicar form textarea {
     width: 100%;
     max-width: 100%;
@@ -5,34 +14,14 @@
     max-height: 300px;
     border: none;
     padding: 15px;
-    font-size: 16px;
-    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
     color: #3d3c3c;
-    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 1);
     border-radius: 6px;
 }
 
 .publicar form .contenedor-botones {
     padding: 10px 0;
     border-bottom: 1px solid #c7c8ca;
-}
-
-.inputfile {
-    width: 0.1px;
-    height: 0.1px;
-    opacity: 0;
-    overflow: hidden;
-    position: absolute;
-    z-index: -1;
-}
-
-.inputfile+label {
-    color: white;
-    background-color: #82bd3f;
-    display: inline-block;
-    padding: 3px 7px;
-    cursor: pointer;
-    border-radius: 4px;
 }
 
 .publicar form button {
@@ -48,30 +37,13 @@
     cursor: pointer;
 }
 
-.inputfile {
-    width: 0.1px;
-    height: 0.1px;
-    opacity: 0;
-    overflow: hidden;
-    position: absolute;
-    z-index: -1;
+input[type="file"] {
+    display: none;
 }
 
-.inputfile+label {
-    color: white;
-    background-color: #82bd3f;
+.custom-file-upload {
     display: inline-block;
-    padding: 3px 7px;
+    color: #453da9;
+    font-size: 2rem;
     cursor: pointer;
-    border-radius: 4px;
-}
-
-.inputfile:focus+label,
-.inputfile+label:hover {
-    background-color: #3d3c3c;
-}
-
-.inputfile:focus+label {
-    outline: 1px dotted #000;
-    outline: -webkit-focus-ring-color auto 5px;
 }

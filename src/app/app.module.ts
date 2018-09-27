@@ -11,6 +11,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireModule } from '@angular/fire';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+
+
 import { environment } from '../environments/environment';
 import { AuthService } from './services/auth.service';
 
@@ -44,8 +47,6 @@ import { SignupComponent } from './pages/signup/signup.component';
 import { UsersComponent } from './pages/users/users.component';
 import { FriendsComponent } from './pages/friends/friends.component';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,8 +60,6 @@ import { FriendsComponent } from './pages/friends/friends.component';
     SignupComponent,
     UsersComponent,
     FriendsComponent,
-
-
   ],
   imports: [
     BrowserModule,
@@ -71,6 +70,7 @@ import { FriendsComponent } from './pages/friends/friends.component';
     BrowserAnimationsModule,
     AngularFireAuthModule,
     AngularFireDatabaseModule,
+    AngularFireStorageModule,
     AngularFireModule,
     AngularFireModule.initializeApp(environment.firebase),
     CdkTableModule, CdkTreeModule,
