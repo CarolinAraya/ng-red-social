@@ -17,7 +17,7 @@ export class SinglePostComponent implements OnInit{
   editContent: FormGroup;
   user: any
 
-  constructor(private formBuilder: FormBuilder, private DatabaseService: DatabaseService, private AuthService: AuthService) {
+  constructor(private formBuilder: FormBuilder, private DatabaseService: DatabaseService, public AuthService: AuthService) {
     this.createEditContentForm();
    }
   createEditContentForm() {
