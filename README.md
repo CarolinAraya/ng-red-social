@@ -1,27 +1,25 @@
-# SocialNetworkAngular
+## GOOD FOOD
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.5.
+Good Food es una Red Social enfocada en nutrición consciente. Mediante nuestro proceso como estudiantes de desarrollo front-end en Laboratoria creemos que es importante utilizar las herramientas tecnológicas de manera activa, crear consciencia del entorno y así generar cambios positivos en nuestra comunidad y el mundo.
 
-## Development server
+Nuestra aplicación nace de la necesidad de promover una alimentación sana pero por sobre todo consciente, más que por el hecho de nuestra salud corporal individual es debido a la escaces de agua que está viviendo hoy en día el mundo. En estas circunstancias muchos medios han considerado de suma importancia reducir la producción de carnes ya que son una de las industrias de mayor gasto indiscriminado de este recurso esencial. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Sin ánimo de condenar el gusto por las carnes se trada de ofrecer alternativas para ver nacer una cultura altruista y demostrar lo exiquisito, fácil y muy nutritivo lo que puede llegar a ser salvar el mundo!
 
-## Code scaffolding
+Y qué mejor manera de hacerlo que con una Red Social!!
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+#Nuestra app
 
-## Build
+La primera versión de nuestra aplicación ya está ofreciendo todo lo que necesitas para compartir tu gusto por la cocina consciente. 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+-- Un sistema de logueo para tener tu app personalizada
+-- Un muro donde podrás publicar, subir fotos, editar y eliminar además podrás agregar a las personas a las cuales su publicación haya llamado tu tención.
+Si deseas descargar la aplicación, debes abrirla en tu editor de texto preferido abre la consola de tu pc asegurándote que estés posicionad@ en la ruta donde está el archivo de la app ejecuta este comando:
 
-## Running unit tests
+```  $ npm install ```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Ahora podrás hechar a correr la app con :
 
-## Running end-to-end tests
+``` $ ng serve -o ```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+#### Esperemos que sea de tu agrado!! 
