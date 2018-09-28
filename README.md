@@ -12,8 +12,14 @@ Y qué mejor manera de hacerlo que con una Red Social!!
 
 La primera versión de nuestra aplicación ya está ofreciendo todo lo que necesitas para compartir tu gusto por la cocina consciente. 
 
--- Un sistema de logueo para tener tu app personalizada
--- Un muro donde podrás publicar, subir fotos, editar y eliminar además podrás agregar a las personas a las cuales su publicación haya llamado tu tención.
+- Un sistema de logueo para tener tu app personalizada
+- Un muro donde podrás publicar, subir fotos, editar y eliminar 
+- La lista de todos nuestros usuarios para poder agregar l@s amig@s que te interesen
+
+## Desarrollo
+
+#### Esta aplicación está desarrollada con el framework Angular 6
+
 Si deseas descargar la aplicación, debes abrirla en tu editor de texto preferido abre la consola de tu pc asegurándote que estés posicionad@ en la ruta donde está el archivo de la app ejecuta este comando:
 
 ```  $ npm install ```
