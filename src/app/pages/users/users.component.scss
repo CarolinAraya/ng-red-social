@@ -1,27 +1,42 @@
-.color {
-  background: white;
-  margin: 10px;
-  border-radius: 12px;
+.user {
+    background: #f1f0f0;
+    margin: 10px;
+    padding: 1rem;
+    border-radius: 12px;
 }
+
 .button-container {
-  padding: 10px;
+    padding: 10px;
 }
 
-.mat-flat-button, .mat-raised-button, .mat-fab, .mat-mini-fab {
-  font-size: 14px;
-  float: right;
-  margin: 10px;
-  font-family: 'Roboto', sans-serif;
-  background: #82b43f;
-  color: #fff;
-  border-radius: 3px;
-  cursor: pointer;
+.mat-flat-button,
+.mat-raised-button,
+.mat-fab,
+.mat-mini-fab {
+    font-size: 14px;
+    float: right;
+    margin: 10px;
+    font-family: 'Roboto', sans-serif;
+    background: #82b43f;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
 }
 
-
+.profile-photo {
+    width: 100%;
+    border: 5px solid #e3dcdc;
+}
 
 .profile-button {
-  background: #e13857 !important;
+    background: #e13857 !important;
 }
 
-
+.rol {
+    border-radius: 5px;
+    background-color: #d9d4d5;
+    font-size: 1.2rem;
+    padding: 3px;
+    color: #120f0f;
+    padding: 0.4rem;
+}

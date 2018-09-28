@@ -14,6 +14,7 @@ export class UsersComponent implements OnInit {
 
   constructor(private database: DatabaseService, private authService: AuthService) {
     this.users$ = database.getUsers(`/users`);
+    console.log('usuarios ' + JSON.stringify(this.users$))
   }
 
   ngOnInit() {

@@ -1,23 +1,24 @@
-<div *ngFor="let user of users$ | async" class="color">
-  <div class="row">
-    <div class="col-3">
-      <div rounded-circle>
-        <img  class="profile-comment" width="30" src="../../assets/img/user-default.png">
-      </div>
-    </div>
-    <div class="col-9">
-      <div class="row">
-        <h6>{{user.displayName}}</h6>
-      </div>
-      <div class="row">
-        <p>{{user.email}}</p>
-      </div>
-      <div class="row ">
-        <div  text-right class="button-container" >
-            <button text-right mat-raised-button (click)="addFriend(user)">AGREGAR</button>
-            <button text-right mat-raised-button class="profile-button">PERFIL</button>
+<div *ngFor="let user of users$ | async" class="user">
+    <div class="row">
+        <div class="col-3">
+            <img class="rounded-circle shadow-sm profile-photo img-fluid" src="{{user.photoUrl}}">
         </div>
-      </div>
+        <div class="col-9">
+            <div class="row">
+                <h6>{{user.displayName}}</h6>
+            </div>
+            <div class="row">
+                <p>{{user.email}}</p>
+            </div>
+            <div class="row">
+                <p class="rol">{{user.rol}}</p>
+            </div>
+            <div class="row ">
+                <div text-right class="button-container">
+                    <button text-right mat-raised-button (click)="addFriend(user)">AGREGAR</button>
+                    <button text-right mat-raised-button class="profile-button">PERFIL</button>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 </div>

@@ -14,7 +14,7 @@ export class AddPostComponent{
   postForm: FormGroup;
   image: any;
   currentUploadProgress:number = -1;
-  constructor(private authService: AuthService, private database: DatabaseService, private formBuilder: FormBuilder, private storage: AngularFireStorage) {
+  constructor(public authService: AuthService, private database: DatabaseService, private formBuilder: FormBuilder, private storage: AngularFireStorage) {
     this.createPostForm();
   }
 

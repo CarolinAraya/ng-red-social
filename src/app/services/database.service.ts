@@ -22,13 +22,11 @@ export class DatabaseService {
             const snapshotUser = snapshotUsers[i];
             const userValue = snapshotUser.payload.val();
             userValue['key'] = snapshotUser.payload.key;
-            //(<any>userValue).key = snapshotUser.payload.key;
-
             result.push(userValue);
           }
           return result;
         }));
-    }
+  }
     addData(path, object) {
       this.database.list(path).push(object);
     }
